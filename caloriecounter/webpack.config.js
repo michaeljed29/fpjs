@@ -1,14 +1,14 @@
 module.exports = {
-  entry: './src/index.js',
-  devtool: 'inline-source-map',
+  entry: "./src/index.js",
+  devtool: "inline-source-map",
   output: {
-    filename: 'bundle.js',
+    filename: "bundle.js"
   },
   watch: true,
   devServer: {
-    contentBase: './src',
+    contentBase: "./src",
     compress: true,
-    port: 9000,
+    port: 9004
   },
   module: {
     rules: [
@@ -16,13 +16,13 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
-            presets: ['babel-preset-env'],
-            plugins: [require('babel-plugin-transform-object-rest-spread')],
-          },
-        },
-      },
-    ],
-  },
+            presets: ["babel-preset-env"],
+            plugins: [require("babel-plugin-transform-object-rest-spread")]
+          }
+        }
+      }
+    ]
+  }
 };
