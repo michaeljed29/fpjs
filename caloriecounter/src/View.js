@@ -5,7 +5,8 @@ import {
   mealInputMsg,
   caloriesInputMsg,
   saveMealMsg,
-  deleteMealMsg
+  deleteMealMsg,
+  editMealMsg
 } from "./Update";
 import * as R from "ramda";
 
@@ -84,7 +85,7 @@ function tableRow(dispatch, meal) {
       }),
       i({
         className: "ph1 fa fa-pencil-square-o pointer",
-        onclick: () => console.log("you clicked edit")
+        onclick: () => dispatch(editMealMsg(id))
       })
     ])
   ]);
